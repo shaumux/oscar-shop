@@ -1,1 +1,1 @@
-web: gunicorn django_oscar_clothshop.wsgi --log-file -
+web: gunicorn django_oscar.wsgi --log-file -

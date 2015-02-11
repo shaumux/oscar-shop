@@ -124,7 +124,7 @@ AUTHENTICATION_BACKENDS = (
 )
 
 TEMPLATE_DIRS = (
-    location('templates'),
+    location('templates/OnlineShop'),
     OSCAR_MAIN_TEMPLATE_DIR,
 )
 

@@ -1,0 +1,16 @@
+.container-fluid .span{margin:0 10px 0 0;}
+.container-fluid .nav{margin:0px;}
+#header_links{  background-color: #1b1b1b;
+    background-image: linear-gradient(to bottom, #222222, #111111);
+    background-repeat: repeat-x;
+    border-color: #252525;
+}
+.page{margin-top:80px;}
+.user-login a{color: #fff!important;}
+.navbar .nav > li > a:focus, .navbar .nav > li > a:hover {
+    background-color: transparent;
+    color: #fff!important;
+    text-decoration: none;
+}
+.site-logo a{color: #fff;}
+.basket-mini{color:#fff;}

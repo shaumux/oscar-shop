@@ -13,7 +13,8 @@
                 <div class="container-fluid">
                     <section class="site-logo  pull-left">
                         {% include "partials/brand.html" %}
-                    </section>            
+                    </section>
+		    {% comment %}
                     {% if LANGUAGES|length > 1 %}
                     <section class="language_selector span2">
                         <form id="language_selector" class="navbar-form" action="{% url 'set_language' %}" method="post">
@@ -31,6 +32,7 @@
                         </form>
                     </section>
                     {% endif %}
+		    {% endcomment %}
                     {% include "partials/search.html" %}
                     <section class="user-login pull-right">
                         <ul class="nav">

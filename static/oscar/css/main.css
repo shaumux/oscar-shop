@@ -14,3 +14,11 @@
 }
 .site-logo a{color: #fff;}
 .basket-mini{color:#fff;}
+.breadcrumb{
+    background-color: #fff;
+    border-bottom: 1px dotted red;
+    border-radius: 0;
+    padding: 0 15px 15px 0;
+}
+.top_links .nav{float:right;}
+.site-logo{padding-left:15px;}

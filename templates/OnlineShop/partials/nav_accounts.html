@@ -11,12 +11,13 @@
             </a>
              <div class="nav-collapse account-collapse collapse">
                 <div class="container-fluid">
-                    <section class="site-logo  pull-left">
+                <div class="row-fluid">
+                    <section class="site-logo  pull-left span2">
                         {% include "partials/brand.html" %}
                     </section>
 		    {% comment %}
                     {% if LANGUAGES|length > 1 %}
-                    <section class="language_selector span2">
+                    <section class="language_selector span4">
                         <form id="language_selector" class="navbar-form" action="{% url 'set_language' %}" method="post">
                             {% csrf_token %}
                             <input name="next" type="hidden" value="{{ language_neutral_url_path }}" />
@@ -34,7 +35,7 @@
                     {% endif %}
 		    {% endcomment %}
                     {% include "partials/search.html" %}
-                    <section class="user-login pull-right">
+                    <section class="user-login pull-right span6">
                         <ul class="nav">
                             {% if user.is_authenticated %}
                             <li>
@@ -58,6 +59,7 @@
                               {% endif %}
                          </ul>
                     </section>
+                   </div>
                 </div>
              </div>
         </div>

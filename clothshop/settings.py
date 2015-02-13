@@ -1,5 +1,5 @@
 """
-Django settings for e_Commerce project.
+Django settings for clothshop project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -10,34 +10,28 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-from oscar import OSCAR_MAIN_TEMPLATE_DIR
+import dj_database_url
 from oscar import get_core_apps
+from oscar import OSCAR_MAIN_TEMPLATE_DIR
 from oscar.defaults import *
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 location = lambda x: os.path.join(
-    os.path.dirname(os.path.realpath(__file__)), '..', x)
+    os.path.dirname(os.path.realpath(__file__)),'..', x)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '8oxf(z28g-77c*(5cu2^s*sn_5ichcr*5&v3j3-3)e+*ev(zi6'
+SECRET_KEY = 'w!2gjdr+7fsn7o7l48w663l4*2g-%p0%kfcj*v$9@8x%2fdp5#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-SITE_ID = 1
-
 TEMPLATE_DEBUG = True
-THUMBNAIL_DEBUG = True
 
-ALLOWED_HOSTS = []
-ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
-)
+ALLOWED_HOSTS = ['*']
 
-MANAGERS = ADMINS
 
 # Application definition
 
@@ -46,12 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.flatpages',
-    'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'django.contrib.flatpages',
     'compressor',
-] + get_core_apps()
+
+] +  get_core_apps()
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -60,32 +55,22 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    #'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware', 
     'oscar.apps.basket.middleware.BasketMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+
 )
 
 ROOT_URLCONF = 'clothshop.urls'
 
 WSGI_APPLICATION = 'clothshop.wsgi.application'
 
-TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or
-    # "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-    location('templates/OnlineShop'),
-    OSCAR_MAIN_TEMPLATE_DIR,
-)
+
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+DATABASES = {}
+DATABASES['default'] =  dj_database_url.config()
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -103,51 +88,17 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
-    '/var/www/static/', os.path.join(BASE_DIR, "cache"),
-)
-# setting for django compressor
-COMPRESS_ROOT = os.path.join(BASE_DIR, '../staticfiles/')
 
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
 )
 
-# media root settings
-MEDIA_ROOT = os.path.join(BASE_DIR, '')
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SITE_ID = 1
 
-MEDIA_URL = '/cache/'
-
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        }
-    },
-    'handlers': {
-        'mail_admins': {
-            'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
-        }
-    },
-    'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'propagate': True,
-        },
-    }
-}
-
-# Specify the default test runner.
-TEST_RUNNER = 'django.test.runner.DiscoverRunner'
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
@@ -165,9 +116,16 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'oscar.core.context_processors.metadata',
 )
 
+
+
 AUTHENTICATION_BACKENDS = (
     'oscar.apps.customer.auth_backends.EmailBackend',
     'django.contrib.auth.backends.ModelBackend',
+)
+
+TEMPLATE_DIRS = (
+    location('templates/OnlineShop'),
+    OSCAR_MAIN_TEMPLATE_DIR,
 )
 
 HAYSTACK_CONNECTIONS = {

@@ -31,20 +31,7 @@
             <div class="nav-collapse primary-collapse collapse">
             {% block nav_dropdown %}
                 <ul id="browse" class="nav">
-                    <li class="dropdown active {% if expand_dropdown %}open{% endif %}">
-                        <a href="#" class="dropdown-toggle" {% if not expand_dropdown %} data-toggle="dropdown"{% endif %}>
-                            {% trans "Browse store" %}
-                            <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu" data-navigation="dropdown-menu">
-                            <li><a tabindex="-1" href="{% url 'catalogue:index' %}">{% trans "All products" %}</a></li>
-                            <li class="divider"></li>
-                            {% block nav_dropdown_extra_items %}
-                                <li><a href="{% url 'offer:list' %}">{% trans "Offers" %}</a></li>
-                            {% endblock %}
-                        </ul>
-                    </li>
-                    {% category_tree depth=2 as tree_categories %}
+                    {% category_tree depth=4 as tree_categories %}
                             {% if tree_categories %}
                                 {% for tree_category, info in tree_categories %}
                                     {% if info.has_children %}
@@ -62,7 +49,7 @@
                           {% endif %}
                     {% block nav_extra %}
                     {% endblock %}
-                </ul>
+                </ul>                
             {% endblock %}
             </div><!-- /nav-collapse -->
             <div class="main_navigation">

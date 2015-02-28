@@ -66,23 +66,34 @@
             pops out when clicked.  A bit like the Django-Debug-Toolbar button
             {% endcomment %}
             {% if user.is_authenticated and user.is_staff %}
+             <div class="span12">
                 <a class="pull-right hidden-phone" href="{% url 'dashboard:catalogue-product' pk=product.id %}"><small><i class="icon-edit"></i> {% trans "Edit this product" %}</small></a>
+             </div>
             {% endif %}
-            <h1>{{ product.get_title }}</h1>
-
-            {% block product_stock_record %}
-                {% include "catalogue/partials/stock_record.html" with verbose=1 %}
-            {% endblock %}
-
-            {% iffeature "reviews" %}
-                {% include "catalogue/reviews/partials/review_stars.html" %}
-            {% endiffeature %}
-
+            <div class="span12">
+                <span class="span8">
+                    <h1>{{ product.get_title }}</h1>
+                </span>
+                <div class="span4">
+                {% block product_stock_record %}
+                    {% include "catalogue/partials/stock_record.html" %}
+                {% endblock %}
+                </div>
+            </div>
+            <div class="span12 product_status">
+                {% iffeature "reviews" %}
+                    {% include "catalogue/reviews/partials/review_stars.html" %}
+                {% endiffeature %}
+                {% block product_stock_availibility %}
+                    {% include "catalogue/partials/stock_availibility.html" with verbose=1 %}
+                {% endblock %}
+            </div>
             <hr/>
-
+            <div class="span12">
             {% block product_basket_form %}
                 {% include "catalogue/partials/add_to_basket_form.html" %}
             {% endblock %}
+            </div>
         </div><!-- /span6 -->
         {% endblock %}
 

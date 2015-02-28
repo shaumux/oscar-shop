@@ -27,3 +27,21 @@
     top: 45px;
     left:0;
 }
+.product_main h1{
+    font-size: 18px;
+    margin-bottom: 0;
+}
+.product_main .price_color{
+    font-size: 20px;
+    margin-bottom: 0;
+    padding: 10px;
+    text-align: center;
+}
+.product_main .product_status {
+    border-bottom: 1px dotted red;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+.availability{
+    text-align: center;
+}

@@ -45,3 +45,23 @@
 .availability{
     text-align: center;
 }
+.recent_view .product_list .image_container{
+    min-height: 50px;
+}
+.recent_view .product_list .image_container img{
+    width:100%;
+    height:100%;
+}
+.recent_view .product_list .star-rating{
+    display:none;
+}
+.recent_view .product_list .roduct_price{
+    display:none;
+}
+.recent_view .product_list .product_pod{
+    height: auto;
+}
+#product_gallery img{
+    width: 100%;
+    height: 100%;
+}

@@ -4,12 +4,12 @@
 {% with products_sliced=products|slice:":6" %}
     {% if products_sliced %}
         <div class="sub-header">
-            <h2>{% trans 'Products you recently viewed' %}</h2>
+            <h2>{% trans 'Recently Viewed' %}</h2>
         </div>
 
-        <ul class="row-fluid">
+        <ul class="row-fluid recent_view">
             {% for product in products_sliced %}
-                <li class="span2 {% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">{% render_product product %}</li>
+                <li class="span2 product_list {% if forloop.counter0|divisibleby:"6" %}no-margin{% endif %}">{% render_product product %}</li>
             {% endfor %}
         </ul>
     {% endif %}

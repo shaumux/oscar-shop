@@ -35,18 +35,20 @@
     font-size: 20px;
     margin-bottom: 0;
     padding: 10px;
-    text-align: center;
+    text-align: right;
 }
 .product_main .product_status {
     border-bottom: 1px dotted red;
     margin-bottom: 10px;
     padding-bottom: 10px;
+    margin-left: 0px;
 }
 .availability{
-    text-align: center;
+    text-align: right;
 }
 .recent_view .product_list .image_container{
     min-height: 50px;
+    margin-bottom: 30px;
 }
 .recent_view .product_list .image_container img{
     width:100%;
@@ -55,11 +57,12 @@
 .recent_view .product_list .star-rating{
     display:none;
 }
-.recent_view .product_list .roduct_price{
+.recent_view .product_list .product_price{
     display:none;
 }
 .recent_view .product_list .product_pod{
     height: auto;
+    margin: 0;
 }
 #product_gallery img{
     width: 100%;
@@ -104,3 +107,50 @@
     background-repeat: no-repeat;
     background-color: #fff;
 }
+.btn-add-to-basket{
+    padding: 10px 20px;
+    width: auto;
+    background-color: #000;
+    background-image: linear-gradient(to bottom, #000, #000);
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+    background-color: #000;
+    color: #ffffff;
+}
+.product_title{
+    margin-left: 2.5641%;
+}
+.product_main .submit_buttons{
+    margin-left: 0;
+}
+.product_main .submit_buttons .btn-wishlist{
+    float: right;
+}
+.product_list .product_pod {
+    max-height: 350px;
+    height: auto;
+}
+.product_list .image_container {
+    min-height: 100px;
+}
+.product_list .image_container img{
+    max-height: auto;
+}
+.product_list .product_price {
+    position: relative;
+}
+.product_list .product_price .btn-primary{
+    background-color: #000;
+    background-image: linear-gradient(to bottom, #000, #000);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    padding: 10px 15px;
+}
+.product_list .product_price .disabled{
+    padding: 10px 15px;
+}
+
+
+

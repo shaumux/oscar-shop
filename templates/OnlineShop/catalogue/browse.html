@@ -57,7 +57,8 @@
 {% endblock %}
 
 {% block content %}
-
+    
+    {% comment %}
     <form method="get" class="form-horizontal">
         {# Render other search params in a hidden block #}
         <div style="display:none">
@@ -90,9 +91,9 @@
             </p>
         {% endif %}
     </form>
-
+    {% endcomment %}
     {% if products %}
-        <section>
+        <section class="product_list">
             <div>
                 <ol class="row-fluid">
                     {% for product in products %}

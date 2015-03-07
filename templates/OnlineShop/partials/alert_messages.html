@@ -7,9 +7,8 @@ Use message tags to control these alerts.  Available tags include:
 - noicon: don't show an icon
 - error/success/info - these change the connotation of the alert
 {% endcomment %}
-
-<div id="messages">
 {% if messages %}
+<div id="messages">
     {% for message in messages %}
     <div class="alert {% for tag in message.tags|split %}alert-{{ tag }} {% endfor %} fade in">
             <a class="close" data-dismiss="alert" href="#">&times;</a>
@@ -36,5 +35,5 @@ Use message tags to control these alerts.  Available tags include:
             </div>
         </div>
     {% endfor %}
-{% endif %}
 </div>
+{% endif %}

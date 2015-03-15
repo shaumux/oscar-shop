@@ -8171,3 +8171,42 @@ input[type="number"][id*="quantity"] {
   position: fixed;
 }
 /*# sourceMappingURL=styles.css.map */
+
+.basketTextContainer{
+    float: left;
+    margin-top: 8px;
+    overflow: hidden;
+    padding-top: 4px;
+    height: 17px;
+    width: 76px;
+}
+
+.basketTextContainer .basketText{
+    float: left;
+    height: 17px;
+    text-align: right;
+    width: 76px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.basketTextContainer .basketText a:hover{
+    text-decoration:underline;
+}
+
+.top_links .user-login{
+    margin: 12px 0 0;
+}
+
+.top_links .user-login li{
+    list-style: none;
+    border-right: 1px dotted #747474;
+}
+
+.top_links .user-login li a{
+    padding: 0 10px;
+}
+
+.top_links .user-login li:last-child{
+    border-right: 0;
+}

@@ -34,8 +34,11 @@
                     </section>
                     {% endif %}
 		    {% endcomment %}
+                    <section class="bagSummary">
+                         {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
+                    </section>
                     {% include "partials/search.html" %}
-                    <section class="user-login pull-right span6">
+                    <section class="user-login pull-right span5">
                         <ul class="nav">
                             {% if user.is_authenticated %}
                             <li>

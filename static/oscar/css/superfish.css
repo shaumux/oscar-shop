@@ -43,7 +43,7 @@
 	*width: 12em; /* no auto sub width for IE7, see white-space comment below */
 }
 .sf-menu a {
-	border-left: 1px solid #fff;
+	/*border-left: 1px solid #fff;*/
 	/*border-top: 1px solid #dFeEFF;*/ /* fallback colour must use full shorthand */
 	/*border-top: 1px solid rgba(255,255,255,.5);*/
 	padding: .75em 1em;
@@ -53,14 +53,18 @@
 .sf-menu a {
 	color: #FFF;
 }
+
+.sf-menu li:hover a{
+    color:#111;
+}
 .sf-menu li {
-	background: #000;
+	/*background: #000;*/
 	white-space: nowrap; /* no need for Supersubs plugin */
 	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
 	-webkit-transition: background .2s;
 	transition: background .2s;
-    background-image: linear-gradient(to bottom, #222, #111111);
-    background-repeat: repeat-x;
+    text-transform: uppercase;
+    margin-right: 9px;
 }
 .sf-menu ul li {
 	background: #000;
@@ -74,12 +78,11 @@
 }
 .sf-menu li:hover,
 .sf-menu li.sfHover {
-	background: #000;
+	background: #FFF;
+    color:#000;
 	/* only transition out, not in */
 	-webkit-transition: none;
 	transition: none;
-	background-image: linear-gradient(to bottom, #222, #111111);
-    background-repeat: repeat-x;
 }
 
 /*** arrows (for all except IE7) **/

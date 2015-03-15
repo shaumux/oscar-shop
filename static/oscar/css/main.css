@@ -1,9 +1,15 @@
 .container-fluid .span{margin:0 10px 0 0;}
 .container-fluid .nav{margin:0px;}
-#header_links{  background-color: #1b1b1b;
-    background-image: linear-gradient(to bottom, #222222, #111111);
+#header_links{  
     background-repeat: repeat-x;
     border-color: #252525;
+    padding: 6px 0;
+    height: 38px;
+    font-size: 10px;
+    border-bottom: 1px dotted #747474;
+    width: 976px;
+    margin: 0 auto;
+    background: transparent;
 }
 .page{margin-top:80px;}
 .user-login a{color: #fff!important;}

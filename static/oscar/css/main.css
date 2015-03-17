@@ -1,9 +1,15 @@
 .container-fluid .span{margin:0 10px 0 0;}
 .container-fluid .nav{margin:0px;}
-#header_links{  background-color: #1b1b1b;
-    background-image: linear-gradient(to bottom, #222222, #111111);
+#header_links{  
     background-repeat: repeat-x;
     border-color: #252525;
+    padding: 6px 0;
+    height: 38px;
+    font-size: 10px;
+    border-bottom: 1px dotted #747474;
+    max-width: 976px;
+    margin: 0 auto;
+    background: transparent;
 }
 .page{margin-top:80px;}
 .user-login a{color: #fff!important;}
@@ -13,10 +19,39 @@
     text-decoration: none;
 }
 .site-logo a{color: #fff;}
-.basket-mini{color:#fff;}
+.basket-mini{
+    color:#fff;
+    float: right;
+    width: 110px;
+    height: 40px;
+    margin: 0 19px 0 7px;
+    background-position: 2px 7px;
+    font-family: 'azo-sans', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+}
+.basket-mini .icon{
+    float: left;
+    margin: 0;
+    background-image: url('../img/ui/shopping_bag.png');
+    background-repeat: no-repeat;
+    width: 33px;
+    height: 45px;
+    padding: 13px 2px 2px 2px;
+    cursor:pointer;
+}
+.basket-mini .icon .basket-total{
+    overflow: hidden;
+    height: 16px;
+}
+.basket-mini .icon .basket-total span{
+    text-align: center;
+    width: 100%;
+}
+
 .breadcrumb{
     background-color: #fff;
-    border-bottom: 1px dotted red;
+    border-bottom: 1px dotted #C7C5C5;
     border-radius: 0;
     padding: 0 15px 15px 0;
 }
@@ -80,7 +115,7 @@
 /* search button CSS */
 
 .search_form #id_q{
-    border: 0 none;
+    border: 0;
     border-bottom-left-radius: 2px;
     border-top-left-radius: 2px;
     border-bottom-right-radius: 0;
@@ -91,21 +126,23 @@
     width: 142px;
     float: left;
     border-right:1px solid #ccc;
+    font-size: 13px;
 }
 .search_form .btn{
     border: 0 none;
-    width:20px;
+    width:26px;
     background: #fff;
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     border-width: 0 0 0 1px;
     text-indent: 99999em;
-    width: 30px; 
     border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #c7c5c5;
     background: url("../img/ui/searchbutton.png");
     background-position: center center;
     background-repeat: no-repeat;
     background-color: #fff;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
 }
 .btn-add-to-basket{
     padding: 10px 20px;
@@ -166,4 +203,5 @@
     text-align: center;
 }
 
+#top_page .search_form{margin: 4px 13px 4px 7px;}
 

@@ -34,8 +34,11 @@
                     </section>
                     {% endif %}
 		    {% endcomment %}
+                    <section class="bagSummary">
+                         {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
+                    </section>
                     {% include "partials/search.html" %}
-                    <section class="user-login pull-right span6">
+                    <section class="user-login pull-right span5">
                         <ul class="nav">
                             {% if user.is_authenticated %}
                             <li>
@@ -47,7 +50,7 @@
                                         <span class="label label-important">{{ num_unread_notifications }}</span>
                                     </a>
                                 {% else %}
-                                    <a href="{% url 'customer:summary' %}"><i class="icon-user"></i> {% trans "Account" %}</a>
+                                    <a href="{% url 'customer:summary' %}"><i class="icon-user"></i> {% trans "MyAccount" %}</a>
                                 {% endif %}
                             </li>
                                 {% if user.is_staff or perms.partner.dashboard_access %}
@@ -55,7 +58,7 @@
                                 {% endif %}
                                 <li><a id="logout_link" href="{% url 'customer:logout' %}"><i class="icon-signout"></i> {% trans "Logout" %}</a></li>
                             {% else %}
-                                <li><a id="login_link" href="{% url 'customer:login' %}"><i class="icon-signin"></i> {% trans "Login or register" %}</a></li>
+                                <li><a id="login_link" href="{% url 'customer:login' %}"><i class="icon-signin"></i> {% trans "Login/Register" %}</a></li>
                               {% endif %}
                          </ul>
                     </section>

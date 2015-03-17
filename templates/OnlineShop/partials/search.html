@@ -1,5 +1,5 @@
 {% load i18n %}
-<section class="search_form span4">
+<section class="search_form pull-right span3">
 <form method="get" action="{% url 'search:search' %}" class="navbar-form">
     {{ search_form.q }}
     <input type="submit" value="{% trans "Search" %}" class="btn " />

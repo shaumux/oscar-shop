@@ -54,10 +54,12 @@
             </div><!-- /nav-collapse -->
             <div class="main_navigation">
                 <div class="container-fluid">
+                    {% comment %}
                     <div class="row-fluid">
                         {# Mini-basket wrapped in a block so some templates can now display it #}
                         {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
                     </div>
+                    {% endcomment %}
                 </div>
             </div>
         </div>

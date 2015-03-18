@@ -54,7 +54,10 @@
 	color: #FFF;
 }
 
-.sf-menu li:hover a{
+.sf-menu li > a:hover{
+    color:#111;
+}
+.sfHover > a{
     color:#111;
 }
 .sf-menu li {

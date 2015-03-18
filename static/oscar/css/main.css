@@ -204,4 +204,7 @@
 }
 
 #top_page .search_form{margin: 4px 13px 4px 7px;}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
 

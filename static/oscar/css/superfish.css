@@ -53,8 +53,10 @@
 .sf-menu a {
 	color: #FFF;
 }
-
-.sf-menu li:hover a{
+.sf-menu li > a:hover{
+    color:#111;
+}
+.sfHover > a{
     color:#111;
 }
 .sf-menu li {
@@ -63,8 +65,8 @@
 	*white-space: normal; /* ...unless you support IE7 (let it wrap) */
 	-webkit-transition: background .2s;
 	transition: background .2s;
-    text-transform: uppercase;
-    margin-right: 9px;
+        text-transform: uppercase;
+        margin-right: 9px;
 }
 .sf-menu ul li {
 	background: #000;
@@ -79,7 +81,7 @@
 .sf-menu li:hover,
 .sf-menu li.sfHover {
 	background: #FFF;
-    color:#000;
+        color:#000;
 	/* only transition out, not in */
 	-webkit-transition: none;
 	transition: none;

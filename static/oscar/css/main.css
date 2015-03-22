@@ -7,7 +7,7 @@
     height: 38px;
     font-size: 10px;
     border-bottom: 1px dotted #747474;
-    width: 976px;
+    max-width: 976px;
     margin: 0 auto;
     background: transparent;
 }
@@ -204,4 +204,7 @@
 }
 
 #top_page .search_form{margin: 4px 13px 4px 7px;}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
 

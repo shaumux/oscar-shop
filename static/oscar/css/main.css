@@ -166,15 +166,22 @@
 .product_list .product_pod {
     max-height: 350px;
     height: auto;
+    text-align: center;
+}
+.product_list .product_pod .product_title{
+    margin-left: 0;
 }
 .product_list .image_container {
     min-height: 100px;
 }
 .product_list .image_container img{
-    max-height: auto;
+    max-width: 94%;
+    width: 100%;
 }
 .product_list .product_price {
-    position: relative;
+    position:relative;
+    left: 0;
+    width: 100%;
 }
 .product_list .product_price .btn-primary{
     background-color: #000;
@@ -194,6 +201,10 @@
     float: left;
     text-align: center;
 }
+.category_list .product_image img{
+    max-width: 94%;
+    width: 100%;
+}
 .category_list .product_pod{
     max-height: 200px;
 }
@@ -201,6 +212,7 @@
     width:100%;
     float: left;
     text-align: center;
+    margin-left: 0;
 }
 
 #top_page .search_form{margin: 4px 13px 4px 7px;}

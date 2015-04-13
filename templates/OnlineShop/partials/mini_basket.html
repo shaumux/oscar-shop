@@ -1,8 +1,8 @@
 {% load currency_filters %}
 {% load i18n %}
 
-<div class="basket-mini pull-right hidden-phone span2">
-    <div data-toggle="dropdown">
+<div class="span4">
+    <div data-toggle="dropdown" class="span6">
 	    <div class="icon">
 		    <div class="basket-total">
 			    <span>
@@ -18,7 +18,7 @@
     <ul class="dropdown-menu pull-right">
 	    <li>{% include "basket/partials/basket_quick.html" %}</li>
     </ul>
-    <div class="basketTextContainer">
+    <div class="basketTextContainer span6">
         <a class="basketText" href="{% url 'basket:summary' %}">{% trans "View basket" %}</a>
     </div>
 </div>

@@ -4,7 +4,7 @@
     background-repeat: repeat-x;
     border-color: #252525;
     padding: 6px 0;
-    height: 38px;
+    /*height: 38px;*/
     font-size: 10px;
     border-bottom: 1px dotted #747474;
     max-width: 976px;
@@ -166,15 +166,22 @@
 .product_list .product_pod {
     max-height: 350px;
     height: auto;
+    text-align: center;
+}
+.product_list .product_pod .product_title{
+    margin-left: 0;
 }
 .product_list .image_container {
     min-height: 100px;
 }
 .product_list .image_container img{
-    max-height: auto;
+    max-width: 94%;
+    width: 100%;
 }
 .product_list .product_price {
-    position: relative;
+    position:relative;
+    left: 0;
+    width: 100%;
 }
 .product_list .product_price .btn-primary{
     background-color: #000;
@@ -194,6 +201,10 @@
     float: left;
     text-align: center;
 }
+.category_list .product_image img{
+    max-width: 94%;
+    width: 100%;
+}
 .category_list .product_pod{
     max-height: 200px;
 }
@@ -201,10 +212,66 @@
     width:100%;
     float: left;
     text-align: center;
+    margin-left: 0;
 }
 
 #top_page .search_form{margin: 4px 13px 4px 7px;}
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+@media (max-width: 767px) {
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .top_links .row-fluid .logo{
+        margin: 0 3%;
+        width:30%;
+        float: left;
+    }
+    #top_page .search_form {
+        margin: 3px 0 3px 7%;
+        width:50%;
+        float: right;
+    }
+    #top_page .search_form .navbar-form{
+        width: 100%;
+    }
+    #top_page .search_form .navbar-form input:first-child{
+        width: 60%;
+    }
+    #top_page .search_form .navbar-form input:last-child{
+        width: 20%;
+    }
+    .top_links .row-fluid .user-login{
+        position: absolute;
+        width:40%;
+        float: left;
+        text-align: center;
+        top: 45px;
+    }
+    .top_links .row-fluid .user-login .nav{
+        float: left;
+        font-size: 20px;
+    }
+    .top_links .row-fluid div:last-child{
+        position: relative;
+        width: 60%;
+        float: right;
+        padding: 0 0 0 7%;
+    }
+    .top_links .row-fluid div:last-child div:first-child{
+        width: 30%;
+        float: left;
+        padding: 4px;
+    }
+    .top_links .row-fluid div:last-child div:first-child .icon{
+        width:100%;
+        color: #fff;
+    }
+    .top_links .row-fluid div:last-child .basketTextContainer{
+        padding: 4px;
+    }
 }
 

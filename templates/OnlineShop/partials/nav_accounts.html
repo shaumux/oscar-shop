@@ -25,7 +25,6 @@
                 {% endif %}
                 {% endcomment %}
                 {% include "partials/brand.html" %}
-                {% include "partials/search.html" %}
                 <div class="user-login span3">
                      <ul class="nav">
                         {% if user.is_authenticated %}
@@ -50,6 +49,7 @@
                         {% endif %}
                      </ul>
                 </div>
+                {% include "partials/search.html" %}
                 {% block mini_basket %}{% include "partials/mini_basket.html" %}{% endblock %}
                </div>
             </div>

@@ -24,29 +24,32 @@
     float: right;
     width: 110px;
     height: 40px;
-    margin: 0 19px 0 7px;
     background-position: 2px 7px;
     font-family: 'azo-sans', sans-serif;
     font-weight: 500;
     font-size: 11px;
 }
 .basket-mini .icon{
+    /*text-align: center;*/
+    width: 100%;
     float: left;
     margin: 0;
     background-image: url('../img/ui/shopping_bag.png');
+    #background-image: url('../img/ui/icon_arrow_down.png');
     background-repeat: no-repeat;
-    width: 33px;
-    height: 45px;
     padding: 13px 2px 2px 2px;
     cursor:pointer;
 }
 .basket-mini .icon .basket-total{
     overflow: hidden;
-    height: 16px;
+    height: 25px;
 }
 .basket-mini .icon .basket-total span{
     text-align: center;
     width: 100%;
+}
+.basket-mini .basketText{
+    float: none;
 }
 
 .breadcrumb{
@@ -55,7 +58,7 @@
     border-radius: 0;
     padding: 0 15px 15px 0;
 }
-.top_links .nav{float:right;}
+.top_links .nav{float:left;}
 .site-logo{padding-left:15px;}
 
 .dropdown-submenu > .dropdown-menu{
